@@ -1,0 +1,13 @@
+@mixin centralize-and-ajust-top($top-value:50%) {
+    position: absolute;
+    overflow: hidden;
+    top: $top-value;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+@mixin typing-animation(){
+    white-space: nowrap;
+    border-right: 3px solid gray; 
+    animation: type-text 3s steps(30) 1s infinite, blink-cursor .5s steps(40) infinite;
+}

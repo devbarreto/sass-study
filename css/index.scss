@@ -1,0 +1,181 @@
+@import "helpers/reset";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/placeholders";
+
+html,
+body {
+  @extend %standart-font;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  color: $paragraph-text;
+  background-color: $background-color;
+  background: radial-gradient(lighten($background-color, 10) 10%, $background-color 80%);
+
+  @media (max-width: 500px) {
+    padding: 5px;
+  }
+}
+
+.fixed-text-container {
+  font-size: 3rem;
+  color: dodgerblue;
+  @include centralize-and-ajust-top(35%);
+}
+
+.alternative-text {
+  width: fit-content;
+  font-size: 3.5rem;
+  text-align: center;
+  @include centralize-and-ajust-top(50%);
+}
+
+.btn-toggle {
+  background: transparent;
+  padding: 15px 20px;
+  font-size: 20px;
+  min-width: 10rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: $radius;
+  box-shadow: 0px 0px 10px $neon-color, inset 0px 0px 10px $neon-color;
+  transition: 0.7s;
+
+  @include centralize-and-ajust-top(70%);
+  @extend %neon-effect;
+  @extend %standart-font;
+
+  &:focus,
+  :focus-within {
+    outline: none;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 15px $neon-color, inset 0px 0px 15px $neon-color;
+  }
+}
+
+#text {
+  padding: 5px 10px;
+  border-right: 30px solid gray;
+  animation: blink-cursor 0.5s infinite steps(45);
+  @extend %neon-effect;
+}
+
+@keyframes blink-cursor {
+  from {
+    border-right-color: $cursor-color;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.icons-reference {
+  color: #999;
+  padding: 10px;
+  font-size: 0.7rem;
+  @include centralize-and-ajust-top(97%);
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.coffee-smoke{
+    position: absolute;
+    top: 22%;
+    left: 49.5%;
+    transform: translate(-50%,-50%);
+    transform: rotate(-90deg);
+    animation: smoke-trails 2s infinite ease;
+}
+
+@keyframes smoke-trails{
+    from{
+        opacity: 1;
+        top: 21%;
+    }
+    to{
+        opacity: 0;
+        top: 19%;
+    }
+}
+
+.coffee-glass{
+    @include centralize-and-ajust-top(25%);
+}
+
+.social {
+  position: absolute;
+  bottom: 1%;
+  right: 2%;
+  text-align: center;
+  
+  div{
+      padding: 10px 5px;
+  }
+
+  a {
+    color: #fff;
+    background: $neon-color;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 28px;
+    padding: 9px 3px;
+    margin: 0 2px;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-font-smoothing: antialiased;
+    
+    &:before{
+        font-size: 26px;
+    }
+    
+    &:hover span {
+      bottom: 50px;
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+    span {
+      color: #666;
+      position: absolute;
+      bottom: 0;
+      left: -25px;
+      right: -25px;
+      padding: 5px 7px;
+      font-size: 14px;
+      border-radius: 2px;
+      background: #fff;
+      opacity: 0;
+      -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+      &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff;
+        position: absolute;
+        bottom: -5px;
+        left: 40px;
+      }
+    }
+  }
+}

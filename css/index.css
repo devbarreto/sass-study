@@ -1,0 +1,208 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   Eric Meyer
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.btn-toggle, #text {
+  color: #fff;
+  text-shadow: 0px 0px 20px #009bff; }
+
+html,
+body, .btn-toggle {
+  font-family: 'Courier New', Courier, monospace; }
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background-color: #333;
+  background: radial-gradient(#4d4d4d 10%, #333 80%); }
+  @media (max-width: 500px) {
+    .main-container {
+      padding: 5px; } }
+
+.fixed-text-container {
+  font-size: 3rem;
+  color: dodgerblue;
+  position: absolute;
+  overflow: hidden;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.alternative-text {
+  width: fit-content;
+  font-size: 3.5rem;
+  text-align: center;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.btn-toggle {
+  background: transparent;
+  padding: 15px 20px;
+  font-size: 20px;
+  min-width: 10rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px #009bff, inset 0px 0px 10px #009bff;
+  transition: 0.7s;
+  position: absolute;
+  overflow: hidden;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .btn-toggle:focus,
+  .btn-toggle :focus-within {
+    outline: none; }
+  .btn-toggle:hover {
+    box-shadow: 0px 0px 15px #009bff, inset 0px 0px 15px #009bff; }
+
+#text {
+  padding: 5px 10px;
+  border-right: 30px solid gray;
+  animation: blink-cursor 0.5s infinite steps(45); }
+
+@keyframes blink-cursor {
+  from {
+    border-right-color: #fff; }
+  to {
+    border-right-color: transparent; } }
+.icons-reference {
+  color: #999;
+  padding: 10px;
+  font-size: 0.7rem;
+  position: absolute;
+  overflow: hidden;
+  top: 97%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .icons-reference:hover {
+    color: #fff; }
+
+.coffee-smoke {
+  position: absolute;
+  top: 22%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  transform: rotate(-90deg);
+  animation: smoke-trails 2s infinite ease; }
+
+@keyframes smoke-trails {
+  from {
+    opacity: 1;
+    top: 21%; }
+  to {
+    opacity: 0;
+    top: 19%; } }
+.coffee-glass {
+  position: absolute;
+  overflow: hidden;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.social {
+  position: absolute;
+  bottom: 1%;
+  right: 2%;
+  text-align: center; }
+  .social div {
+    padding: 10px 5px; }
+  .social a {
+    color: #fff;
+    background: #009bff;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 28px;
+    padding: 9px 3px;
+    margin: 0 2px;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-font-smoothing: antialiased; }
+    .social a:before {
+      font-size: 26px; }
+    .social a:hover span {
+      bottom: 50px;
+      visibility: visible;
+      opacity: 1; }
+    .social a span {
+      color: #666;
+      position: absolute;
+      bottom: 0;
+      left: -25px;
+      right: -25px;
+      padding: 5px 7px;
+      font-size: 14px;
+      border-radius: 2px;
+      background: #fff;
+      opacity: 0;
+      -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+      .social a span:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff;
+        position: absolute;
+        bottom: -5px;
+        left: 40px; }
+
+/*# sourceMappingURL=index.css.map */
