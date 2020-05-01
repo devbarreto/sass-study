@@ -1,3 +1,6 @@
+
+[Live preview](https://devbarreto.github.io/sass-study/)
+
 # Sass: Syntatically Awesome Style Sheet
 
 Há cerca de um ano saí do desenvolvimento desktop e entrei no mercado de trabalho seguindo outro paradigma, o desenvolvimento web. Embora a parte de back-end não sofra tanto com a migração de padrões e linguagem - devido a lógica de programação - em relação ao front-end, tive muita dificuldade para me adaptar e talvez essa fosse minha maior fragilidade no inicio. Com a prática e a compreensão de todos, obtive alguma evolução. Utilizar os pré-processadores otimizou muito no desenvolvimento visual das aplicações, e justamente por isso quis compartilhar com quem quisesse entender um pouco mais sobre essa ferramenta.
